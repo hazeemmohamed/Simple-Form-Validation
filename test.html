@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputBox" onblur="testValidation()" placeholder="Enter the name"><br>
+    <span id="errorMsg"> </span><br>
+     <input type="email" id="emailBox" placeholder="Enter the email"><br>
+    <span id="errorMsg"> </span>
+
+    <script>
+        var inputBox = document.getElementById("inputBox")
+        var email = document.getElementById("emailBox")
+        var errorMsg = document.getElementById("errorMsg")
+        
+        function testValidation(){
+            if (inputBox.value === ""){
+                errorMsg.innerHTML = "Name required"
+            }
+            else{
+                errorMsg.textContent="";
+            }
+
+        }
+
+    
+    </script>
+</body>
+</html>

@@ -3,71 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration Form Validation</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <h1>Student Detail Form</h1>
-    <form action="" s>
-        
-        <table border="1">
+
+    <div class="MainContainer">
+    <div class="container">
+    <form onsubmit="submitForm(event)">
+        <table>
             <tr>
-                <td>Name</td>
-                <td><input type="text" id="name"></td>
+                <td class="name">Name</td>
+                <td class="textBox">
+                    <input type="text" id="name"  class="inputField" onblur="validateForm()"  placeholder="Enter Your Name" > 
+                    <br><span id="nameError" class="error" ></span>
+                    </td>
             </tr>
-             <tr>
-                <td>Age</td>
-                <td><input type="text" id="age"></td>
-            </tr>
-             <tr>
-                <td>Gender</td>
-                <td>Male <input type="radio" name="gender" value="Male" id="male"> Female <input type="radio" value="Female" name="gender" id="female"></td>
-            </tr>
-             <tr>
-                <td>Course</td>
-                <td><select name="" id="course">
-                    <option value="React">React</option>
-                    <option value="Javascrip">Javascrip</option>
-                    <option value="Java">Java</option>
-                </select></td>
-            </tr>
-             <tr>
-                <td>Email</td>
-                <td><input type="email" id="email"></td>
-            </tr>
-             <tr>
-                <td colspan="2" onclick="save()" id="btnSave" style="text-align: center; background-color: aquamarine;">Save</td>
                 
+                
+            <tr>
+                <td class="name">Email</td>
+                <td><input type="email" id="email"  class="inputField" oninput="validateForm()"  placeholder="Enter Your Email Address" >
+                <br><span id="emailError" class="error" ></span>
+            </td>
+            </tr>
+            <tr>
+                <td class="name">Password</td>
+                <td><input type="password" id="password"  oninput="validateForm()" class="inputField" placeholder="Enter Your password" >
+                <br><span id="passError" class="error"></span>
+            </td>
+            </tr>
+            <tr >
+                <td colspan="2"><input onclick="registerForm()" disabled  class="btnSubmit" type="submit" id="btn"></td>
             </tr>
         </table>
-    </form>
-
-    <table border="1" >
-        <tr>
-            <th>name</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Course</th>
-            
-            <th>Email</th>
-            <th>Delete</th>
-
-        </tr>
-        <tbody class="listContainer">
-        <tr>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-            <td><button id="btnDelete" onclick="deleteList(event)" style="background-color: red;">Delete</button></td>
-            
-        </tr>
-        </tbody>
         
-    </table>
-        <script src="scrept.js"></script>
-
+        
+    </form>
+</div>
+</div>
+    <script src="script.js"></script>
+    
 </body>
 </html>
