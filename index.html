@@ -23,13 +23,13 @@
                 
             <tr>
                 <td class="name">Email</td>
-                <td><input type="email" id="email"  class="inputField" oninput="validateForm()"  placeholder="Enter Your Email Address" >
+                <td><input type="email" id="email"  class="inputField" onblur="validateForm()"  placeholder="Enter Your Email Address" >
                 <br><span id="emailError" class="error" ></span>
             </td>
             </tr>
             <tr>
                 <td class="name">Password</td>
-                <td><input type="password" id="password"  oninput="validateForm()" class="inputField" placeholder="Enter Your password" >
+                <td><input type="password" id="password"  onblur="validateForm()" oninput="checkInput()" class="inputField" placeholder="Enter Your password" >
                 <br><span id="passError" class="error"></span>
             </td>
             </tr>

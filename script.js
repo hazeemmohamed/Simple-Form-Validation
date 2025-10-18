@@ -37,12 +37,22 @@ else if (pass.value.length < 6) {
     passError.textContent = "";
   }
 
-    if (inputName.value !== "" && email.value.includes("@") && pass.value.length >= 6) {
+    checkInput()
+
+}
+function checkInput(){
+
+     var inputName = document.getElementById("name")
+var email = document.getElementById("email")
+var pass = document.getElementById("password")
+var btn = document.getElementById("btn")
+
+
+     if (inputName.value !== "" && email.value.includes("@") && pass.value.length >= 6) {
         btn.disabled = false;
     } else {
         btn.disabled = true;
     }
-
 }
 
 function submitForm(event){
