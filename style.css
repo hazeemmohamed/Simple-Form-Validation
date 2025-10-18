@@ -47,3 +47,17 @@ body{
     border-radius: 10px;
     border: 1px solid gainsboro;
 }
+
+@media screen and (max-width:667px) {
+    .MainContainer {
+        width: 100%;
+        padding: 10px;
+display: flex;
+    justify-content: center;
+    align-items: center;    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+}
